@@ -114,7 +114,7 @@ module ActiveMerchant #:nodoc:
         self.year  = year.to_i
         self.start_month = start_month.to_i
         self.start_year  = start_year.to_i
-        self.issue_number  = issue_number.to_i
+
         self.number = number.to_s.gsub(/[^\d]/, "")
         self.type.downcase! if type.respond_to?(:downcase)
         self.type = self.class.type?(number) if type.blank?
